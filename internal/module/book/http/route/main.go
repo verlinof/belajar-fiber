@@ -11,5 +11,5 @@ func BookRoute(router fiber.Router, bookHandler book_http.BookHandler) {
 	bookRoutes.Get("/:id", bookHandler.GetBookByID)
 	bookRoutes.Post("/", bookHandler.CreateBook)
 	bookRoutes.Patch("/:id", bookHandler.UpdateBook)
-	// bookRoutes.Delete("/:id", bookHandler.DeleteBook)
+	bookRoutes.Delete("/:id", bookHandler.DeleteBook)
 }
