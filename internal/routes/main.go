@@ -16,6 +16,7 @@ func InitRoute(app *fiber.App) {
 	//Dependencies
 	redisManager := pkg_redis.NewRedisManager(redis_config.Config.Host, redis_config.Config.Password, redis_config.Config.Db)
 	validator := pkg_validation.NewXValidator()
+	validator.InitCustomValidation()
 
 	// Books
 	bookService := book_service.NewBookService()
